@@ -20,3 +20,10 @@
 .question-info {
 	font: Helvetica;
 }
+
+.btn {
+	margin-bottom: 3px;
+    margin-left: 5px;
+    font-size: 12px;
+    padding: 1px 10px;
+}
