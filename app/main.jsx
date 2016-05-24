@@ -38,7 +38,9 @@ var QuestionListWrapper = React.createClass({
 		return (
 			<div id="game-panel">
 				<Center>
-					<QuestionList questions={_questions} isAdmin={false} />
+					<div style={{width: "350px"}}>
+						<QuestionList questions={_questions} isAdmin={false} />
+					</div>
 				</Center>
 				<Center>
 					** outcome viusalization stub **

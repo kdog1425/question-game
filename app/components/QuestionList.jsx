@@ -7,7 +7,7 @@ module.exports = React.createClass({
        console.log('render question list');
        console.log(this.props);
        var addQuestion = "";
-
+       var divStyle = {width : "100%"};
        if (this.props.isAdmin){
           addQuestion = <AddQuestion />;
        }
@@ -16,7 +16,7 @@ module.exports = React.createClass({
                 <div className="col-md-6">
                     {addQuestion}
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6" style={divStyle}>
                     {
                         this.props.questions.map(function(s,index){
                             return(
