@@ -43,7 +43,7 @@ We will use another entity called OutcomeType (so we don't have to store multipl
 ---
 
 - The web page (non admin) will simply retrieve documents (questions) from the db, and present these to the user, along with 'yes' and 'no' buttons. It will function as a SPA.
-Once a question is answered, a QuestionAnswered action is fired with the corresponding payload ('yes' or 'no').
+Once a question is answered, a QuestionAnswered action is fired with the corresponding payload ('yes' or 'no'). The front end should eventually diplay one question at a time (so next step can be some kind of paging scheme using front end routing).
 
 - The buttons will update the statistics according to the reply (as I understand it, after the game is served to the front facing UI, and does not communicate with the back end, so this is all done on the front end).
 
