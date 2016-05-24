@@ -1,6 +1,6 @@
 var $ = require("jquery");
 var promise = require("es6-promise");
-var resourceUrl = "http://localhost:7777/questions";
+var resourceUrl = "/questions";
 
 module.exports = {
     getQuestions: function () {
