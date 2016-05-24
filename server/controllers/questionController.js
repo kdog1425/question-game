@@ -5,12 +5,18 @@ var _ = require("underscore");
 var router = require("express").Router();
 router.route("/questions/:id?").get(getQuestions);
 
+var response = {};
+response.isAdmin = false;
+            
 function getQuestions(req, res) {
     Question.find(function (err, questions) {
-        if (err)
+        if (err){
             res.send(err);
-        else
-            res.json(questions);
+        }
+        else{
+        	response.questions = questions;
+            res.json(response);
+        }
     });
 }
 
