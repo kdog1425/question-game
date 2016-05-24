@@ -1,0 +1,22 @@
+#layout {
+	background: #ddd;
+	padding: 10px;
+	margin: 10px;
+}
+
+#admin-panel {
+	background: #9191B3;
+	padding: 10px;
+	margin: 10px;
+}
+
+#game-panel {
+	background: #7D68A2;
+	padding: 10px;
+	margin: 10px;
+}
+
+
+.question-info {
+	font: Helvetica;
+}
