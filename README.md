@@ -16,9 +16,9 @@ I have done some work with RoR, but lately I've been on a quest to learn React a
 
 My initial thoughts are as such:
 
-- The questions are basically documents, like a survey. If we think of something like surveymonkey, we may expect that the client, in the future, would want to have all sorts of questions - meaning documents that do not have a uniform structure - multiple choice, open questions, ranking questions, or even some kind of task that is not a question at all, but has outcomes. So mongodb seems like a good choice. Also, I have been working with mongodb this past week, and I have deployed a simple NERD app with mognodb on heroku during my practice sessions, so I'll choose this path for simplicity.
+- The questions are basically documents, like a survey. If we think of something like surveymonkey, we may expect that the client, in the future, would want to have all sorts of questions - meaning documents that do not have a uniform structure - multiple choice, open questions, ranking questions, or even some kind of task that is not a question at all, but has outcomes. So mongodb seems like a good choice. Also, I have been working with mongodb this past week, and I have deployed a simple NERD app with mognodb on heroku during my practice sessions, so I'll choose this path for simplicity (I just noticed you asked to use an RDBMS -- I'm happy to discuss both options). 
 
-- The admin page will have a simple interface to begin with - A text box for questions, a text box for tokens, and CRUD operations. The questions and tokens would be grouped under some entity, for the time being let's call it Question.
+- The admin page will have a simple interface to begin with - A text box for questions, a text box for tokens, and CRUD operations. The questions and tokens would be grouped under some entity, for the time being let's call it Question. Of course, there would need to be a login as admin (say using JWT auth), and a way to decorate-protect some CRUD actions. 
 
 ---
 
@@ -54,3 +54,13 @@ Corresponding actions: QuestionAnswered
 
 2. The simple board, could be either some sort of chart library, or a React component that is comprised of child components (e.g. leftmost column is text, then number of tokens as updated after each question.) The board does not fire any actions, it only updates after a QuestionAnswered action propogates through the system (QuetsionAnswered action fired -> dipatcher -> registered stores update themselves -> Controller View -> UpdateOutcomes -> fire NextQuestion action)
 
+### Setup
+
+- clone repo and cd to root folder
+- bower install
+- npm install
+- gulp
+- server server/server.js
+- visit http://localhost:7777/ with your browser to check out admin mode.
+
+You need mongodb installed and running.
