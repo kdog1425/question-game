@@ -2,7 +2,6 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 var Router = require("react-router").Router;
 var Route = require("react-router").Route;
-var IndexRoute = require("react-router").IndexRoute;
 var Link = require("react-router").Link;
 var hashHistory = require("react-router").hashHistory;
 var QuestionList = require("./components/QuestionList.jsx");
@@ -46,7 +45,6 @@ function render(){
 	
     ReactDOM.render(
     	<Router history={hashHistory}>
-    	  <IndexRoute component={Layout} />
     	  <Route path="/" component={Layout} />
     	  <Route path="game" component={QuestionListWrapper} />
     	  <Route path="admin" component={AdminQuestionListWrapper} />
