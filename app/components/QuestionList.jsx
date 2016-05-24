@@ -4,11 +4,10 @@ var AddQuestion = require("./AddQuestion.jsx");
 
 module.exports = React.createClass({
    render:function(){
-       console.log('render question list');
-       console.log(this.props);
        var addQuestion = "";
        var divStyle = {width : "100%"};
-       if (this.props.isAdmin){
+       var isAdmin = this.props.isAdmin;
+       if (isAdmin){
           addQuestion = <AddQuestion />;
        }
        return(
@@ -20,7 +19,7 @@ module.exports = React.createClass({
                     {
                         this.props.questions.map(function(s,index){
                             return(
-                                <QuestionInfo info={s} key={"question-"+index} />
+                                <QuestionInfo isAdmin={isAdmin} info={s} key={"question-"+index} />
                             )         
                         })
                     }

@@ -7,12 +7,15 @@ module.exports = React.createClass({
         actions.deleteQuestion(this.props.info);
     },
     render:function(){
-        console.log(this.props.info);
+        var deleteLink;
+        if (this.props.isAdmin) {
+            deleteLink = (<span className="pull-right text-uppercase delete-button" onClick={this.deleteQuestion}>&times;</span>);
+        }
         return(
             <div className="panel panel-default question-info">
                 <div className="panel-heading">
                     {this.props.info.question_text}
-                    <span className="pull-right text-uppercase delete-button" onClick={this.deleteQuestion}>&times;</span>
+                    {deleteLink}
                 </div>
             </div>
         )
