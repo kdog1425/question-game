@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use("/", adminQuestionController);
 app.use("/", questionController);
 
-DEBUG = true;
+DEBUG = false;
 
 // log to console
 app.use(morgan('dev'));
