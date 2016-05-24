@@ -1,6 +1,6 @@
 var $ = require("jquery");
 var promise = require("es6-promise");
-var resourceUrl = "/questions";
+var resourceUrl = "http://question-game.herokuapp.com/questions";
 
 module.exports = {
     getQuestions: function () {
