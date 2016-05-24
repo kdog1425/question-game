@@ -63,4 +63,10 @@ Corresponding actions: QuestionAnswered
 - server server/server.js
 - visit http://localhost:7777/ with your browser to check out admin mode.
 
-You need mongodb installed and running.
+You should have mongodb installed and running.
+
+### Testing
+TODO
+
+### See it live
+http://question-game.herokuapp.com/
