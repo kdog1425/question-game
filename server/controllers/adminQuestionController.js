@@ -27,7 +27,7 @@ function addQuestion(req, res) {
             res.send(err);
         }
         else{
-            response.questions = questions;
+            response.questions = question;
             res.json(response);
         }
     });
