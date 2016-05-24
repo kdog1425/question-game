@@ -23,8 +23,11 @@ var Layout = React.createClass({
        return (
        	<div id="layout"> 
        		<h1>I'm a Layout </h1>
-       		<Link to="game"> Play </Link> 
+       		<Link to="game"> Play | </Link> 
        		<Link to="admin"> Admin </Link> 
+       		<div>
+       			{this.props.children}
+       		</div>
        	</div>
        );
    } 
@@ -59,9 +62,10 @@ function render(){
 	
     ReactDOM.render(
     	<Router history={hashHistory}>
-    	  <Route path="/" component={Layout} />
+    	  <Route path="/" component={Layout}>
     	  <Route path="game" component={QuestionListWrapper} />
     	  <Route path="admin" component={AdminQuestionListWrapper} />
+    	  </Route>
     	</Router>, document.getElementById('container')
     );
 }
