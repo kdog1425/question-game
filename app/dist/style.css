@@ -1,5 +1,17 @@
+body {
+   background: #BD6A50;
+}
+
+.navbar {
+	background: #607D8B !important;
+}
+
+.navbar-brand {
+	color: #FF9800 !important;
+}
+
 #layout {
-	background: #ddd;
+	background: #D7EC00;
 	padding: 10px;
 	margin: 10px;
 }
@@ -37,5 +49,5 @@
 }
 
 .panel-score {
-	background-color: #A333C1 !important;	
+	background-color: #2196F3 !important;	
 }
