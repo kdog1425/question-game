@@ -19,17 +19,15 @@ module.exports = React.createClass({
        var scores = this.props.scores;
        return(
            <div className="row">
-                
-                    {
-                        Object.keys(this.props.scores).map(function (key){
-                            return(
-                              <div className="col-md-6" style={divStyle}>
-                                <ScoreInfo text={key} score={scores[key]} />
-                              </div>
-                            )         
-                        })
-                    }
-               
+                  {
+                      Object.keys(this.props.scores).map(function (key, index){
+                          return(
+                            <div className="col-md-6" style={divStyle}>
+                              <ScoreInfo text={key} score={scores[key]} key={"score-" + index} />
+                            </div>
+                          )         
+                      })
+                  }
            </div>
        )
    } 

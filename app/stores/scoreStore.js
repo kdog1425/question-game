@@ -21,7 +21,14 @@ function ScoreStore() {
         for (o in outcomes){
             var text = outcomes[o].outcome_text;
             if (!(text in _scores)){
-                _scores[text] = 0;
+                switch(answer){
+                    case 'YES':
+                        _scores[text] = parseInt(outcomes[o].yes_value);
+                        break;
+                    case 'NO':
+                        _scores[text] = parseInt(outcomes[o].no_value);        
+                        break;
+                }
             } else {
                 switch(answer){
                     case 'YES':
@@ -33,7 +40,7 @@ function ScoreStore() {
                 }
             }
         }
-        triggerListeners();
+        //triggerListeners();
     }
 
     function triggerListeners() {

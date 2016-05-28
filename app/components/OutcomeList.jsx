@@ -8,9 +8,9 @@ module.exports = React.createClass({
            <div className="row">
                 <div className="col-md-6" style={divStyle}>
                     {
-                        this.props.outcomes.map(function(s){
+                        this.props.outcomes.map(function(s, index){
                             return(
-                                <OutcomeInfo info={s} key={"outcome-"+s._id} />
+                                <OutcomeInfo info={s} key={"outcome-"+index} />
                             )         
                         })
                     }
