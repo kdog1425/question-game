@@ -52,13 +52,7 @@ function QuestionStore() {
                     triggerListeners();
                     break;
             }
-        } else if (split[0] === "outcome") {
-            switch (split[1]) {
-                case "addOutcome":
-                    triggerListeners();
-                    break;
-            }
-        }
+        } 
     });
 
     return {

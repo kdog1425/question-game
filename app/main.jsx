@@ -94,9 +94,6 @@ var AdminQuestionListWrapper = React.createClass({
 
 
 function render(){
-    console.log('main render');
-    console.log(_questions);
-    console.log(_scores);
     ReactDOM.render(
     	<Router history={browserHistory}>
     	  <Route path="/" component={Layout}>
