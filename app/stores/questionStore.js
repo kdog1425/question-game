@@ -1,6 +1,5 @@
 var dispatcher = require("../dispatcher");
 var questionService = require("../services/questionService");
-var adminQuestionService = require("../services/adminQuestionService");
 
 function QuestionStore() {
     var listeners = [];
@@ -17,13 +16,13 @@ function QuestionStore() {
     }
 
     function addQuestion(question) {
-        adminQuestionService.addQuestion(question).then(function (res) {
+        questionService.addQuestion(question).then(function (res) {
             triggerListeners();
         });
     }
 
     function deleteQuestion(question) {
-        adminQuestionService.deleteQuestion(question).then(function (res) {
+        questionService.deleteQuestion(question).then(function (res) {
             triggerListeners();
         });
     }
@@ -45,6 +44,18 @@ function QuestionStore() {
                     break;
                 case "deleteQuestion":
                     deleteQuestion(payload.question);
+                    break;
+            }
+        } else if (split[0] === "score") {
+            switch (split[1]) {
+                case "answerQuestion":
+                    triggerListeners();
+                    break;
+            }
+        } else if (split[0] === "outcome") {
+            switch (split[1]) {
+                case "addOutcome":
+                    triggerListeners();
                     break;
             }
         }

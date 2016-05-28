@@ -25,4 +25,17 @@
 	margin-bottom: 3px;
     margin-left: 5px;
     font-size: 12px;
+    padding: 1px 10px;
+}
+
+.panel-heading {
+	background-color: #CDDC39 !important;
+}
+
+.panel-outcome {
+	background-color: #F33321 !important;	
+}
+
+.panel-score {
+	background-color: #A333C1 !important;	
 }

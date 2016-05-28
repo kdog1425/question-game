@@ -12,5 +12,12 @@ module.exports = {
            question:question,
            type:"question:deleteQuestion" 
         });
+    },
+    answerQuestion:function(question, answer){
+        dispatcher.dispatch({
+           question:question,
+           answer:answer,
+           type:"question:answerQuestion" 
+        });
     }
 }

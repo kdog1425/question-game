@@ -5,16 +5,17 @@ var path = require("path");
 var morgan = require('morgan');
 
 //controllers
-var adminQuestionController = require("./controllers/adminQuestionController");
+
 var questionController = require("./controllers/questionController");
+var outcomeController = require("./controllers/outcomeController");
 
 
 //Express request pipeline
 var app = express();
 app.use(express.static(path.join(__dirname, "../app/dist")));
 app.use(bodyParser.json());
-app.use("/", adminQuestionController);
 app.use("/", questionController);
+app.use("/questions/:id?/", outcomeController);
 
 DEBUG = true;
 

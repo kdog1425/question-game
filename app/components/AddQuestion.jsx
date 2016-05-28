@@ -5,7 +5,7 @@ module.exports = React.createClass({
     getInitialState:function(){
       return {
           question_text:"",
-          outcomes:[],
+          outcomes:[]
       }  
     },
     addQuestion:function(e){
