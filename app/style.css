@@ -11,9 +11,10 @@ body {
 }
 
 #layout {
-	background: #D7EC00;
+	background: #FFF;
 	padding: 10px;
 	margin: 10px;
+	border-radius: 9px;
 }
 
 #admin-panel {
@@ -26,6 +27,7 @@ body {
 	background: #7D68A2;
 	padding: 10px;
 	margin: 10px;
+	border-radius: 3px;
 }
 
 
@@ -38,6 +40,10 @@ body {
     margin-left: 5px;
     font-size: 12px;
     padding: 1px 10px;
+}
+
+.panel {
+	box-shadow: 3px 2px 1px rgba(0,0,0,.55) !important;
 }
 
 .panel-heading {
