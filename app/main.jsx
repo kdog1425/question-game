@@ -30,8 +30,6 @@ var _scores = {};
 
 var getScoresCallback = function(res){
     _scores = res;
-    console.log('_scores: ', _scores);
-    //render();
 };    
 scoreStore.onChange(getScoresCallback);
 
