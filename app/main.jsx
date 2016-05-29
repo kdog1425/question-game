@@ -2,12 +2,15 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 var Router = require("react-router").Router;
 var Route = require("react-router").Route;
+var IndexRoute = require("react-router").IndexRoute;
 var Link = require("react-router").Link;
 var Center = require("react-center");
 var hashHistory = require("react-router").hashHistory;
 var browserHistory = require("react-router").browserHistory;
+var Center = require("react-center");
 
 var _isAdmin = false;
+var _gifDisplayed;
 
 // VIEW
 var Layout = React.createClass({
@@ -65,11 +68,22 @@ var AdminQuestionListWrapper = React.createClass({
 	}
 });
 
+var Intro = React.createClass({
+  render:function(){
+    return(
+      <Center>
+        <img src={'Animated-gif-spinning-question-mark-picture-moving.gif'} alt="boohoo" className="img-responsive"/>
+      </Center>
+    )
+  }
+});
+
 
 function render(){
     ReactDOM.render(
     	<Router history={browserHistory}>
     	  <Route path="/" component={Layout}>
+          <IndexRoute component={Intro} />
       	  <Route path="game" component={QuestionListWrapper} />
       	  <Route path="admin" component={AdminQuestionListWrapper} />
     	  </Route>
@@ -105,3 +119,5 @@ var getScoresCallback = function(res){
 questionStore.onChange(getQuestionsCallback); 
 outcomeStore.onChange(getQuestionsCallback);
 scoreStore.onChange(getScoresCallback);
+_gifDisplayed = false;
+

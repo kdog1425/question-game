@@ -14,7 +14,11 @@ gulp.task("bundle", function () {
 });
 
 gulp.task("copy", ["bundle"], function () {
-    return gulp.src(["app/index.html","app/lib/bootstrap-css/css/bootstrap.min.css","app/style.css"])
+    return gulp.src([
+        "app/index.html",
+        "app/lib/bootstrap-css/css/bootstrap.min.css",
+        "app/style.css",
+        "app/assets/Animated-gif-spinning-question-mark-picture-moving.gif"])
         .pipe(gulp.dest("app/dist"));
 });
 
