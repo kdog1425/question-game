@@ -46,7 +46,7 @@ var Layout = React.createClass({
             {'textDecoration': 'None'}, 
             {'fontSize' : '18px'}
           )}
-            to="game"> Play &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;</Link> 
+            to="game"> Play |</Link> 
             <Link  style={Object.assign(
             {},
             {'textDecoration': 'None'}, 
