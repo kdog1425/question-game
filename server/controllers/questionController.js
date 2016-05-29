@@ -8,7 +8,6 @@ questionRouter.route("/questions/:id?").get(getQuestions).post(addQuestion).dele
 var response = {};
             
 function getQuestions(req, res) {
-    console.log('controller: get questions');
     Question.find(function (err, questions) {
         if (err){
             res.send(err);
@@ -21,7 +20,6 @@ function getQuestions(req, res) {
 }
 
 function addQuestion(req, res) {
-    console.log('controller: add questions');
     var question = new Question(_.extend({}, req.body));
     question.save(function (err) {
         if (err){
@@ -35,7 +33,6 @@ function addQuestion(req, res) {
 }
 
 function deleteQuestion(req, res) {
-    console.log('controller: delete questions');
     var id = req.params.id;
     Question.remove({ _id: id }, function (err, removed) {
         if (err)

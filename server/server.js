@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use("/", questionController);
 app.use("/questions/:id?/", outcomeController);
 
-DEBUG = false;
+DEBUG = true;
 
 // log to console
 app.use(morgan('dev'));

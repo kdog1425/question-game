@@ -52,7 +52,7 @@ function QuestionStore() {
                     triggerListeners();
                     break;
             }
-        } 
+        }
     });
 
     return {

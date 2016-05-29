@@ -10,7 +10,6 @@ var response = {};
 response.isAdmin = true;
             
 function getOutcomes(req, res) {
-    console.log('controller: get outcomes');
     Question.find(function (err, question) {
         if (err){
             res.send(err);
@@ -24,8 +23,6 @@ function getOutcomes(req, res) {
 }
 
 function addOutcome(req, res) {
-    console.log('controller: add outcomes');
-    console.log(req.body);
     var outcome = new Outcome(_.extend({}, req.body));
     Question.findByIdAndUpdate(
         req.body.question_id,
@@ -45,7 +42,6 @@ function addOutcome(req, res) {
 }
 
 function deleteOutcome(req, res) {
-    console.log('controller: delete outcomes');
     var id = req.params.id;
     Outcome.remove(
         req.body.question_id,

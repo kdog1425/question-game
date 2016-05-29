@@ -11,12 +11,10 @@ function ScoreStore() {
     }
     
     function getScores(cb){
-        console.log('score store:', _scores);
         cb(_scores);
     }
 
     function answerQuestion(question, answer){
-        console.log('store - answerQuestion: ', question, answer);
         var outcomes = question.outcomes;
         for (o in outcomes){
             var text = outcomes[o].outcome_text;

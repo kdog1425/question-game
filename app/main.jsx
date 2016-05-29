@@ -7,33 +7,6 @@ var Center = require("react-center");
 var hashHistory = require("react-router").hashHistory;
 var browserHistory = require("react-router").browserHistory;
 
-// QUESTIONS
-var QuestionList = require("./components/QuestionList.jsx");
-var questionStore = require("./stores/questionStore");
-var _questions = [];
-
-var getQuestionsCallback = function(res){
-    _questions = res.questions;
-    render();
-};    
-questionStore.onChange(getQuestionsCallback); 
-
-// OUTCOMES
-var OutcomeList = require("./components/OutcomeList.jsx");
-var outcomeStore = require("./stores/outcomeStore");
-outcomeStore.onChange(getQuestionsCallback);
-
-// SCORES
-var ScoreList = require("./components/ScoreList.jsx");
-var scoreStore = require("./stores/scoreStore");
-var _scores = {};
-
-var getScoresCallback = function(res){
-    _scores = res;
-};    
-scoreStore.onChange(getScoresCallback);
-
-
 var _isAdmin = false;
 
 // VIEW
@@ -103,3 +76,31 @@ function render(){
     	</Router>, document.getElementById('container')
     );
 }
+
+// QUESTIONS
+var QuestionList = require("./components/QuestionList.jsx");
+var questionStore = require("./stores/questionStore");
+var _questions = [];
+
+var getQuestionsCallback = function(res){
+    _questions = res.questions;
+    render();
+};    
+
+// OUTCOMES
+var outcomeStore = require("./stores/outcomeStore");
+var OutcomeList = require("./components/OutcomeList.jsx");
+
+// SCORES
+var ScoreList = require("./components/ScoreList.jsx");
+var scoreStore = require("./stores/scoreStore");
+var _scores = {};
+
+var getScoresCallback = function(res){
+    _scores = res;
+    render();
+};    
+
+questionStore.onChange(getQuestionsCallback); 
+outcomeStore.onChange(getQuestionsCallback);
+scoreStore.onChange(getScoresCallback);
