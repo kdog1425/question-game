@@ -1,5 +1,5 @@
 body {
-   background: #BD6A50;
+   background: #EEE;
 }
 
 .navbar {
@@ -7,7 +7,7 @@ body {
 }
 
 .navbar-brand {
-	color: #FF9800 !important;
+	color: #EEEEEE !important;
 }
 
 #layout {
@@ -18,13 +18,13 @@ body {
 }
 
 #admin-panel {
-	background: #9191B3;
+	background: #8C7878;
 	padding: 10px;
 	margin: 10px;
 }
 
 #game-panel {
-	background: #7D68A2;
+	background: #8DB5D7;
 	padding: 10px;
 	margin: 10px;
 	border-radius: 3px;
@@ -47,13 +47,13 @@ body {
 }
 
 .panel-heading {
-	background-color: #CDDC39 !important;
+	background-color: #EEF !important;
 }
 
 .panel-outcome {
-	background-color: #F33321 !important;	
+	background-color: #BBC !important;	
 }
 
 .panel-score {
-	background-color: #2196F3 !important;	
+	background-color: #FEFEFE !important;	
 }
